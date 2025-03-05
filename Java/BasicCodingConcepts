@@ -1,1 +1,777 @@
+Day1
+Why automation?
+When dev develops feature A,then B then C
+We will test first A
+Then B,A
+Then C,B,A 
+So whenever new feature is developed old features also should be tested as regression
+To reduce the manual efforts automation is introduced
+Machine understands only low level binary or close to binary language
+JAVA\\--james gosling @ sun microsystem -1995-oracle acquired java
+Java is a highlevel Object Oriented programming language
+
+
+JAVA- Features\
+------------
+1.simple and easy
+2.OOPS
+3.platform independent- wora write once and read 
+4.multi threading 
+6.robust&secured-strong memory management- which is automatic garbage collection in java
+7.distributed- can develop web,mob,desktop app many apps of different types can be developed.
+OOPS
+----
+1.Class
+2.Objects
+3.Abstracts
+4.Polymorphism
+5.Inheritance
+6.Encapsulation
+Multi threading-multiple task performing at a same time.
+Compiled and intrepeted(executing)
+Javac- Java compiler - compiles highlevel and converts it to low level and makes them machine understable statement and run-converts High level source code into byte code
+Java contains 
+------------
+1.JDK- java development kit -present physically-contains JRE and other dev tools.
+2.JRE-JRE is runtime environment- where JVM executes byte code.
+3.JVM- java byte code is executed 
+Has
+1.class loader
+2.byte code verifier 
+3.intrepreter
+Running file thru cmd prompt
+------------------------------
+C:\learning\karthick_selenium\seleniumbasics\src\seleniumbasicsay2>javac StringReverse.java – creates a class file by compiling java file
+C:\learning\karthick_selenium\seleniumbasics\src\seleniumbasicsay2>java StringReverse.java – runs the class file and executes byte level code to execution result according to code - string reverse here
+Enter name of string to reverse below:
+Malayalam
+with-out reverse() function : malayalaM
+with reverse() function by using String bufferclass : malayalaM
+Class 
+Class specifies design of the object or it’s a template to create an object..
+( ) - parenthesis
+[ ] - brackets
+{ } - braces
+Can class start with _ or $ or letter , no reserved keywords and no space..
+Camelcase- StringReverse 
+Keywords(reserved more than 40-50) -small letters it will start
+ 
+Datatypes
+-------
+Int a; //declaretion
+a=10; //Initialization
+System.out.println(a); //Utilization
+Variables
+---------
+1.global
+2.Local
+class CorejavaBasics{
+ int a=10; // global variable ,delcaretion and initialization should be in same line 
+Public static void main(String args[])
+{
+ 
+}
+Class methodA
+{
+ int b=20; // b,c is a local variable and scope of the variable is inside methods only!! Cant use as global ,, local can be decalred and initialized in different line also
+}
+Class methodB
+{
+ int c=30;
+}
+}
+// global variable--- without initializing if we are printing it will print a default value ,its based on datatype which we
+Use such as int,float
+// local variable ---- without initializing if we are using ,it will throw error
+Char
+65536 ASCII CHAR ARE PRESENT
+ONLY 128 we are using mostly
+Objects
+---------
+An new object can be created using a class ()
+And initized its value to a variable to store it
+An variable created from that class can hold only the class as type to point the address of the object created/derived
+Practised class till 28 nov session
+Int is a primitive datatype and Integer is a class in java
+Constants
+----------
+Final - the value is fixed , and variable is mentioned as uppercase to differentiate the difference
+Final WEEKS=7;
+METHODS
+----------
+Its a block of code it performs certain operations
+Whenever we execute a code, JVM looks for only main method to execute.
+Cannot call non static methd inside static method
+Method can be created as sep blocks and called
+ to return a value
+We need to use return to return value to method
+! Return should be pr
+Sent in last line of method
+16jan25
+Methods practise
+Public static void main(String args[]) - defination below see
+AccessSpecifier/AccessModifier/returnType/methodname(method-parameters)
+Example -realtime to remember
+Examples of above line words --
+Facebook id-private/public visiblity //
+changing account to private when needed// 
+what type you going to search and that value type
+//main(searching iphone(parameter) in amazon)
+Why methods?
+If we write codes in a linear way then
+We cannot gain control over specific lines of code inside overall code
+So to run specific lines we are making code into blocks by blocks ((or )) methods by methods and calling them
+Eg: writing add and sub lines f code line by line linear , we wont have control to choose any one function to run
+So we are structuring blocks
+Of codes as methods.
+Operators:
+-------------
+It is a symbol that allows operator to perform certain operations like arithmetic or logical
+Operands- variable(a,b) used to do some operations
+Unary operator: a++ ,works with one operator 
+Binary : with 2 operands x+y 
+Ternary: 3 operands--> a+b+c
+ 
+1.Assignment:
+--------------
+Simple assignment: + - % /
+Eg: 
+Add=a+b;
+Sub=a-b;
+Compound assignment += -= *= %= 
+Int a=10;
+A=a+10;
+A=a*5;
+2.Relational: < > <= >= !=
+Example:
+Int a=10;
+Int b=20;
+A<b output: true
+A>b output:false
+A!=b output: true
+3.Instance of:
+Class operator{
+Operator op=new operator();
+Boolen b=Op instanceof(operator)
+Print b
+Output: true
+4.logical: 
+and,or,not, – & | ! 
+16jan-- done till operator
+Still pending loop
+ and OOPS – concept ..
+25jan25
+---------
+Operator practise
+Arithmetic operators- = - * /
+Relational operators- < > <= >= !=
+Logical operator &(bitwise) , | ( or operator) &&(shortcircuit)
+ 
+Int a=10;
+a++ --> use(print original vale and then update) -->10
+++a --> update then use -->11
+Decision and control statement
+--------------------------------
+1.if else
+If (age>18)
+Print eligible
+Else
+Print not eligible
+2.else if ladder
+If 
+Else if
+Else if
+Else
+3.Switch case
+Switch(value)
+{
+Case “1”:
+Print “Case 1”;
+Break;
+Case “2”:
+Print “case 2”;
+Break;
+}
+Loops:
+-------------
+For loop
+Initialization-->condition->block execution->iteration updation
+For(i=0;i<5;i+)
+{
+Print I;
+}
+Int[] arr={10,20,30,40,50}
+For(int i:arr)
+{
+Print i
+}
+To iterate arrays or collections -->use enhanced for loop
+Else use simple for loop for other things
+While loop: it’s a entry cehck loop
+While(condition)
+While(i<5)
+{
+Print “Hi” 
+}
+Do-while:it is an exit check loop
+After completing block execution it will check the exit condition if satisfied it will complete the loop 
+//alteast once it will check and execute
+It will execute atleast one time even if its true or false..
+Then itwill terminate the loop
+Static and non static
+------------------------
+ 
+Static
+-----
+It is a member of class
+It creates one copy per class for memory allocation
+Static class can be called anywhere inside a class (inside user defined methods and both main class
+//proper way to call static class is ClassName.variablename-->static_NonStatic.a 
+Each Non static object creates its own set of memory maping for it
+If value of I changed from 10 to 30 it changes for all static objects
+For non static it only changes for the object which we mention and change the value for
+Each non static objects creates their ownmemory and local changes wont impact other objects value which calls same variable
+Phone camera properties - remains same for all iphones
+Phone storage property and usage- differs phone variant to variant
+Main difference
+ static--> classname.membername
+Nonstatic->object variable.membername
+Constructors:
+Constructor name should be same as class name,and it should not have any return type-- and it wont return any value 
+but for methods any name can be kept and return type should be mentioned.
+Default constructors- implicitly created by compiler
+Parameterized constructor- its user defined constructor and compiler wont create a default constructor.
+Constructor overriding- JAVA does not support
+When more than one constructor block has same number of parameters then its overridding 
+Constructor overloading:
+Multiple constructors can be created as blocks with below condition
+Different number of argument should be there between different constructors(as same class name is used jvm will confused which constructor to call
+Constructor(int a)
+Constructor(int a, int b)
+Constructor(boolean a,int b)
+Same name of class for constructor but different arguments
+Inheritance
+--------------------
+Inheriting members of parent(Super) class to child(Sub) class except private members.
+Order of creation of classes doesn’t matter for assuuming as parent or child--->only extends keyword decides which child extends which parent
+Inheritance does not inherit private members
+Encapsulation:
+---------------
+Packing of data and function into single component by hiding internal implementation using getter and setter method
+----------------
+Its used to hide private variables and showing functionalities usng getter and setter method
+
+Method overloading:
+--------------------
+
+
+
+
+Method overriding:-overridding not possible in java(but possible with interface)
+------------------
+Creating same method with same number of argument s not allowed in same class, 
+Possible only on different class -same method name and same argument 
+
+Variable hidding: if both local and global variable is same nam
+ then 
+Local variable a hides the global variable a.
+This.a --> this makes call global 
+Variable inside a method..
+	• This can be used only inside non static method
+	• This- it is a reference to current class objects
+	• This keyword cannot be used inside static method
+	• whenever object gets created it creates a copy of non static members
+
+
+method overriding:
+------------------
+
+sub class provides new implementation to method present in the Super class. it overrides the value of super class
+***
+
+class Super
+{
+
+void add(int a)
+{
+
+	System.out.println("super");
+}
+
+}
+
+
+
+class Sub
+{
+
+
+void add(int i)  	//overridden
+{  
+	System.out.println("sub");
+}
+
+
+}
+
+
+
+to achieve method overriding - we need to use non static method
+
+if static methods are used -- then it is not method overridding - it is ***method hiding*** which is called using Classname.methodname
+
+
+method overrloading --**** static if we use before method name its method hidding ****  classname.methodname we can call in main method
+
+using same method name ,diff (num of arguments,argument types, and sequence)
+
+Class Super
+{
+
+void add(int a)
+{
+System.out.println("super");
+
+}
+
+}
+
+
+class sub
+{
+
+void add(int a, int b)
+{
+System.out.println("sub");
+
+}
+
+}
+
+
+
+polymorphism-- Constructor - method overloading --- all this looking similar
+
+---------------------------------------------------------------------------
+
+one thing having many forms
+
+one method doing same/similar operations like method overloading or performing re defined tasks like method over riding !!
+
+
+method overloading- same method names but different argument names-so compiler wont get confused to call which method - Static binding
+
+method overridding- same method same argument and syntax with access specifiers- void add(int a) || void add(int i) on Super and sub class where Compiler-->
+decides which method to call during run time-- Dynamic Binding
+
+
+example: same names for 2 person in class - we can find difference using Surname -- method overloading--Static Binding
+example: same names and same surnames  --teacher calls using roll number(order of who is first) -- to find difference who comes first-- method overridding--Dynamic binding
+
+
+class types
+------------
+abstract class
+Concrete class
+
+
+methods
+--------
+
+abstract method-method without body,cannot create object to method, 
+Concrete method-method with body
+
+methods
+--------
+
+abstract method-method without body,cannot create object to method, 
+--------
+Concrete method-method with body
+--------
+
+what is use of abstracts
+
+methods are implemented without body and with abstract keyword on method and class
+
+abstract is method without body - where many class can be created by extending abstract class and inside them
+we can call same method name as abstract method witout body and do different implementations
+
+all animals will give sound but different sounds
+animal class is ABSTRACT implemented without body 
+cat will give meow sound-- implemented with meow sound
+dog will give bow bow sound implemented with bow bow sound
+
+abstract class animal
+{
+
+abstract void add();
+
+}
+
+
+class cat extends animal
+{
+
+void add()
+
+{
+
+System.out.println("meow");
+
+}
+
+}
+
+
+class dog extends animal
+{
+
+void add()
+{
+
+System.out.println("bow bow");
+
+}
+
+
+
+}
+
+public static void main(String args[])
+{
+ cat c1=new cat();
+ c1.add();
+
+dog d1=new dog();
+d1.add();
+
+}
+
+
+abstract methd can have
+ both implemented method with body
+ unimplemented method without body also
+
+but interface can strictly have only unimplemented method.
+
+it is a upgraded level of abstract
+
+
+interface:
+-----------
+in interface methods are by default public access specifiers
+
+when hovering few colours will display
+green public
+blue default
+red private
+yellow protected
+
+access specifiers- visiblity we can increase pub-def-private-protected but we cannot reduce
+
+interface by default -final static public
+
+in abstract class- variable is not specified as public by default we need to mention it as what type it is
+
+implemented methods-- with body
+
+unimplemented methods-- without body
+
+interface should be unimplemented methods
+abstract may or may not be unimplemented methods
+
+
+JAVA DOESNT SUPPORT MULTIPLE INHERITANCE THRU CLASSES 
+BUT
+SUPPORTS MULTIPLE INHERITANCE THRU INTERFACE
+
+ONE CLASS CAN INHERIT 2 INTERFACES
+
+INTERFACE TO INTERFACE and class to class extending(useing)- extends keyword is used
+
+class to interface - implements
+interface to class - not supports !!
+
+
+CASTING
+---------
+
+primitive casting
+------------------
+byte->int->short->float->double(order from low to high)
+
+auto widening:
+
+int b=10;
+
+float c=b;
+
+explicit narrowing
+
+int b=10;
+
+byte c= byte(b);
+
+
+derived casting
+----------------
+
+upcasting- sub class starts behaving like parent once assigning sub class object to super class parent 
+
+down casting - super parent class object is assigned to child class
+and parent class starts to behave like a child class
+
+sub to super class (upgrade) is done automatically by compiler
+
+parent to child DOWNGRADE can only be done with explicit narrowing --casting
+
+
+converting upcasted object(parent super behaviour) to behave like child object is called down casting
+
+
+BY DEFAULT IF CLASS IS NOT EXTENDING ANY OTHER CLASS THEN IT EXTENDS OBJECT CLASS
+
+
+WHICH CLASS IS THE SUPER MOST LASS IN JAVA....
+
+OBJECT CLASS 
+-------------
+
+IF A CLASS STILL DOESNT EXTEND OBJECT CLASS BY DEFAULT IT EXTENDS MEMBERS OF OBJECT CLASS BY DEFAULT
+
+
+CLASS A
+{
+
+}
+
+MAIN()
+{
+A.CLONE();  a class calls members of object class and can able to access by default
+
+
+}
+
+
+
+//wrapper class
+---------------
+
+java is  100% object oriented language???--YES&NO because
+it contains primitive data types which does not contain object
+
+how to make java 100% -oops--> using WRAPPER class
+
+steps
+-----
+declare a primitive data type
+convert the primitive date type into non primitive data type
+by assigning primitive(ex:int) to wrapper class(integer)
+
+// above steps are called as BOXING !!
+
+
+
+Boxing:
+---------
+INT a=10;
+
+Interger i1=new Interger();
+
+i1=a;
+
+or
+
+Integer i1=a;
+
+
+unboxing
+---------
+
+int a=i1;	//again converting assigned wrapper class to primitive
+
+
+String
+-------------
+
+
+1.Constant pool -if same value is re declared-new variable just points to that value not newly creates a mem alllocation
+String str1= "java";
+String str2= "java";
+
+
+
+2.Non constant pool(heap)-new mem allocation for each obje
+String str=new String("java");
+String str=new String("java");
+
+
+
+str1==str2 //compares addresses of both
+str1.equals(str2) 	//compares value
+
+
+practise different string operators
+
+and 
+
+Create
+
+Single dimensional array
+multi dimensional array
+
+access and retrieve store elements into arrays
+
+
+
+what is jagged array?
+
+
+
+Exceptions
+--------------------
+
+whenever there is invalid operation is mentioned on code
+jvm will throw exception error while running the code
+
+after exception line code will not execute below lines of code
+
+to execute lines other than exception ,we need exception handler
+
+exception types:
+----------------
+1.checked exception-which comes during compile time
+	use 1.throws/ 2.try catch
+2.Unchecked exception-which comes during runtime
+	can use only 1.Throws
+
+
+
+ types we can handle
+1.throws
+2.try catch 
+
+
+
+
+
+
+throws can be handled for thread.sleep() Throws InterruptedExeption
+//multiple catch blocks can be declared
+
+try Catch
+-------
+try
+{
+	lines to try
+}
+
+	//how catch works-- catches exception from try- ArithmeticException()
+	//Exception has Archetecture- if we use main Super class (Exception | RuntimeException e) on catch it will handle all sub exception it contains under it
+
+
+catch(InterruptedException | ArithmeticException e)	.  //ArithmeticException(subclass) stored into Exception (super class) as object type  --> Exception e= new ArithmeticException();  // when we call super class all sub class is comes under it
+{
+	print some message
+}
+
+	//finally can be used without catch
+	//finally added - when catch didnt find correct exception
+	//finally block will execute as msg
+Finally		
+{
+
+}
+
+
+
+Collections
+----------------
+
+mostly used 1.Arraylist 2.linkedlist   //queue is not used for automation purpose so ignore them for now
+
+ 
+Collections can store heterogenous types of data types(int,boolean,float,char)
+use <> in list to specify specific type of only data to store
+when mentioning int,String all are primitive data types -- so cant be used as assigning to a object-- use wrapper class to specify types of primitive class
+
+types to perform
+add()
+remove()
+size()
+contains()
+
+
+arraylist-- to perform search/validation operation , accessing is faster here
+in array list bit shifting will happen to change or delete position
+so deletion or insertion will be late
+linkedlist--each index holds address of prev and next index-- doubly linked list!!-- insertin /deletion is faster accessing is slow
+
+13 dec 24-- viewd time till 1.56 last session so recall all topics once again with code ..
+
+
+
+25 feb25 
+-----
+practise array,string,lists-array/linkedlist-- done
+
+
+Set
+---
+hashSet
+stores values without duplicate ,if any duplicate it considers as only one entry ignoring duplicates
+order will be sometimes missing when removing entries of duplicate
+
+linkedHashSet
+to print valyes in given order use linkedhashset
+
+ENHANCED FOR LOOPS WORKS FOR ARRAYS AND COLLECTIONS
+
+
+HASHSET DOES NOT FOLLOWW SAME INSERTIO ORDER WHILE PRINTING, LINKED HASH SET FOLLOWS SAME ORDER
+
+
+
+maps
+-----
+
+1.HashMap - prints order in random order
+2.LinkedHashMap- prints items based on index order
+3.TreeMap- prints elements based on ascending order of ASCII value
+
+
+*****for all list,Set,Map concepts implementation will be same ,memory allocation will  differ..based on types
+
+summary:
+----------
+
+iterable (interface)<- collections(interface xtends iterable)<-(list,queue,Set - Interface extends collections)
+
+list- allows duplicates to store
+queue- not needed for our automation purpose
+set- does not allows duplicate data
+Map- stores value based on (key,value) pair
+
+*** collections all class interface present inside java.util package
+
+
+FILE HANDLING
+--------
+file- all classes present inside java.io package
+See eclipse/github for filehandling code - just create/call a file access it nd write inside it
+fileWriter/Reader BufferedWriter/Reader
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
