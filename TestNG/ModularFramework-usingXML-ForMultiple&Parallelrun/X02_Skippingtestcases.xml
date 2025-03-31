@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<!-- passing test case 01 opening webpages inside xml and controlling which method to run and which to skip -->
+
+<suite name="Testng">
+	<test name="test1">
+		<classes>
+			<class name="Testng.TNG01_firsttest">
+				<methods>
+					<include name="openGoogle"> </include>
+					<include name="openFacebook"> </include>
+					<exclude name="openCNN"></exclude>  <!--  exclude means it wont execute as part of testNG run -->
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

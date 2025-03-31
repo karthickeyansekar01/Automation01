@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  running all test case created so far now in testNG all together in modular way using XML -->
+
+
+<suite name="My Suite">
+	<test name="My test">
+		<classes>
+			<class name="Testng.TNG01_firsttest">
+			</class>
+			<class name="Testng.TNG02_AllAnotations_Uses">
+			</class>
+			<class name="Testng.TNG03_AllAnnotations">
+			</class>
+			<class name="Testng.TNG04_AllAnnotations_realtimeExample">
+			</class>
+			<class name="Testng.TNG05_DataProvider">
+			</class>
+			<class name="Testng.TNG06_Assertions">
+			</class>
+			<class name="Testng.TNG07_DependsFunctionality">
+			</class>
+			<class name="Testng.TNG08_GroupingTestcase">
+			</class>
+			
+				
+		</classes>
+	</test>
+</suite>
