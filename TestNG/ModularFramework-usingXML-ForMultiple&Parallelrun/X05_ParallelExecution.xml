@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suite"   parallel = "methods" thread-count="2">
+	<test name="My test">
+		<classes>
+			<class name="Testng.TNG01_firsttest">
+			</class>
+		</classes>
+	</test>
+</suite>

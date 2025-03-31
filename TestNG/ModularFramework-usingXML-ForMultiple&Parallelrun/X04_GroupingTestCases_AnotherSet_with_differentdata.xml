@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+ <!--  included smoke test cases along with regression to run -> which is considered as different runs with DIFFERENT TEST DATA DURING execution -->
+
+<suite name="My Suite">
+	<test name="My test">
+		<classes>
+			<class name="Testng.TNG08_GroupingTestcase">
+			</class>
+			<groups>
+			 <run>
+			  <include name = "Regression"></include>
+			  <include name="smoke"></include>   
+			 </run>
+			</groups>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- passing test case 05 data provider inside xml and controlling which method to run -->
+
+<suite name="Testng">
+	<test name="test1">
+		<classes>
+			<class name="Testng.TNG05_DataProvider">
+				<methods>
+					<include name="senddata"> </include>
+					<include name="getdata"> </include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+
