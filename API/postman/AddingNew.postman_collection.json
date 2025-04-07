@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "330cacf1-e7fc-4715-943a-6840c5bf4267",
+		"name": "AddingNew",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42467714"
+	},
+	"item": [
+		{
+			"name": "Adding new pet",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

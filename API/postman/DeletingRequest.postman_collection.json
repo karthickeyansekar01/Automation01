@@ -1,0 +1,18 @@
+{
+	"info": {
+		"_postman_id": "04a4e356-b53e-47f1-b87e-4871d73b50e3",
+		"name": "DeletingRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42467714"
+	},
+	"item": [
+		{
+			"name": "DeleteRequest",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
