@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "25be9bae-14b0-4df3-8a93-00f1254a105c",
+		"name": "Postman_Capstone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42467714",
+		"_collection_link": "https://automationpostman-5636.postman.co/workspace/e1790bd2-56c4-43d3-9746-d36d6c29f92f/collection/42467714-25be9bae-14b0-4df3-8a93-00f1254a105c?action=share&source=collection_link&creator=42467714"
+	},
+	"item": [
+		{
+			"name": "AddNewUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddContacts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContact",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContact",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//const pm = require('postman');\r",
+							"const expect = require('chai').expect;\r",
+							"// Test Case 1: Add New User\r",
+							"pm.test(\"Add New User - Verify Status Code 201\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.code).to.eql(201);\r",
+							"\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify Status Message Created\", ()=>{\r",
+							"\r",
+							" pm.expect(pm.response.status).to.eql(\"Created\");\r",
+							"});\r",
+							"pm.test(\"Add New User - Verify token\", ()=>{\r",
+							"\r",
+							"    // Get the Response\r",
+							"let jsonData = pm.response.json();\r",
+							"console.log(\"Response is: \", jsonData);\r",
+							"// Expect the response to have a \"token\" property\r",
+							"pm.expect(jsonData).to.have.property(\"token\");\r",
+							"// Set Environment Variable\r",
+							"pm.environment.set(\"auth_token\", jsonData.token);\r",
+							"// Print Token in Console\r",
+							"console.log(\"Generated Token: \", jsonData.token);\r",
+							"}); \r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Test\",\r\n\"lastName\": \"User\",\r\n\"email\": \"test@fake.com\",\r\n\"password\": \"myPassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
