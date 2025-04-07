@@ -1,0 +1,230 @@
+Assignment on API Testing
+
+Q.1. Find the endpoints and test with Postman using chai assertion and automate same in
+RESTAssured.
+
+1.Find pet by its status
+curl -X 'GET' \
+'https://petstore.swagger.io/v2/pet/findByStatus?status=available'\
+-H 'accept: application/json'
+Request URL
+https://petstore.swagger.io/v2/pet/findByStatus?status=available
+Code Details
+200 Response body
+[
+{
+"id": 12467,
+"category": {
+"id": 0,
+"name": "string"
+},
+"name": "Marley",
+"photoUrls": [
+"http://example.com/photo.jpg"
+],
+"tags": [
+{
+"id": 0,
+"name": "string"
+}
+],
+"status": "available"
+},]
+
+
+
+
+
+
+
+
+
+
+2.Add new Pet to the store
+Curl
+curl -X 'POST' \
+'https://petstore.swagger.io/v2/pet'\
+-H 'accept: application/json' \
+-H 'Content-Type: application/json'\
+-d '{
+"id": 111,
+"category": {
+"id": 0,
+"name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+"string"
+],
+"tags": [
+{
+"id": 0,
+"name": "string"
+}
+],
+"status": "available"
+}'
+Request URL
+https://petstore.swagger.io/v2/pet
+Server response
+Code Details
+200
+Response body
+{
+"id": 111,
+"category": {
+"id": 0,
+"name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+"string"
+],
+"tags": [
+{
+"id": 0,
+"name": "string"
+}
+],
+"status": "available"
+}
+
+
+
+
+
+
+
+3.For the same generated id find the pet
+Curl
+curl -X 'GET' \
+'https://petstore.swagger.io/v2/pet/111'\
+-H 'accept: application/json'
+Request URL
+https://petstore.swagger.io/v2/pet/111
+Server response
+Code Details
+200 Response body
+{
+"id": 111,
+"category": {
+"id": 0,
+"name": "string"
+{
+},
+"name": "doggie",
+"photoUrls": [
+"string"
+],
+"tags": [
+{
+"id": 0,
+"name": "string"
+}
+],
+"status": "available"
+}
+
+
+
+
+
+
+4. Update an existing pet
+Curl
+curl -X 'PUT' \
+'https://petstore.swagger.io/v2/pet'\
+-H 'accept: application/json' \
+-H 'Content-Type: application/json'\
+-d '{
+"id": 0,
+"category": {
+"id": 0,
+"name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+"string"
+],
+"tags": [
+"id": 0,
+"name": "string"
+}
+],
+"status": "available"
+}'
+Request URL
+https://petstore.swagger.io/v2/pet
+Server response
+Code Details
+200
+Response body
+{
+"id": 9223372036854776000,
+"category": {
+"id": 0,
+"name": "string"
+},
+"name": "doggie",
+"photoUrls": [
+"string"
+],
+"tags": [
+{
+"id": 0,
+"name": "string"
+}
+],
+"status": "available"
+}
+
+
+
+5.Delete existing pet with same id
+{
+Curl
+curl -X 'DELETE' \
+'https://petstore.swagger.io/v2/pet/111'\
+-H 'accept: application/json'
+Request URL
+https://petstore.swagger.io/v2/pet/111
+Server response
+Code Details
+200
+Response body
+{
+"code": 200,
+"type": "unknown",
+"message": "111"
+}
+
+
+
+
+
+
+
+Q.2 Write an automation script to create POST Request using HashMap and POJO class
+Request
+https://api.restful-api.dev/objects
+{
+"name": "Apple MacBook Pro 16",
+"data": {
+"year": 2019,
+"price": 1849.99,
+"CPUmodel": "Intel Core i9",
+"Harddisksize": "1 TB"
+}
+}
+Response
+200
+"id": "7",
+"name": "Apple MacBook Pro 16",
+"data": {
+"year": 2019,
+"price": 1849.99,
+"CPUmodel": "Intel Core i9",
+"Harddisk size": "1 TB"
+},
+"createdAt": "2022-11-21T20:06:23.986Z"
+}
