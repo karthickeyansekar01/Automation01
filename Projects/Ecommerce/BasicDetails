@@ -1,3 +1,0 @@
-
-Use the OHRM_DDT java class file and utility class file is linked to OHRM_DDT.
-we need to add dependencies 2,3 for apache POI versions-- refer pom.xml added on project for all dependencies
