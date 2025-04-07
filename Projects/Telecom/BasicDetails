@@ -1,0 +1,6 @@
+Telecom project basically uses RestAssured with Testng for running API scripts 
+this code will run few test to create/add/update/login/get/updateCustomer/logout methods
+api chainning is used for running all tests in a single file itself
+for authorization bearer token is used- to update details with access using post or patch
+
+the same work can be done using POSTMAN as well,check postman folder in Telecom.
