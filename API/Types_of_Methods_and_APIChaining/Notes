@@ -1,1 +1,586 @@
+API- Application programming Interface
+--------------------------------------
+maven-build management tool
+in automation- maven project setup is used.-it has pom.xml file
+pom-project object model file- configuration file for project-adding dependency
+src/java
+src/test- folders to add automation files
+
+cucumber-tags,hooks,how to run,runnerfile,keywords,description,project.,featurefile,runner,	
+
+
+combinations used- 
+selenium+cucumber
+selenium+testng
+sel+api(rest assred)
+
+frameworks
+----------
+testng(unit testing framework)
+cucumber(agile framework/)
+
+
+-----------------------------------------------------------------
+API001--05March->API Introduction
+-----------------------------------------------------------------
+newman-command line tool to run postman commands
+
+collection-group of api's
+Webservices-? req and res
+
+middleware connecting frontend and backend 
+types of servers:
+-----------------
+1.desktop arche- 1 user -only 1 can use
+2.client-server -multiple computer connected with single lan
+3.web archetecture- 3tier archetecture-can access globally all servers
+client-web-server
+
+
+dev-will develop business logic in server
+when client requests something-business logic validated and goes to DB servers and -response comes
+process:
+---------
+ENDUSER(can access)-CLIENT(sends req)-WEB SERVER(validates res&res business logics)- DB SERVER(fetches/retrives values from db and shared)
+
+frontend- Client(Selenium)
+backend-WebServer(Web),DB SERVER(oracle/sql server)
+3 layers- in 3 TIER archetecture
+-------------------------------
+presentation-GUI
+Application(hosted on web server and validates business logic everytime req comes)-
+Resource(data)-DATABASE
+
+API major role- request goes as GUI and converts to 
+
+
+in selenium all validated in web server using CLIENT- in form of GUI
+
+cypress,playwright-can help testing API also
+
+in API - how msg request are sent? -- HTTP protocol
+
+COMMUNICATION CAN BE INBTW- (INTERACTION BW 2 APPLICATIONS)
+2 CLIENTS
+1 CLIENT-1 SERVER
+2 SERVERS
+
+LEVELS OF TESTING-- 4
+UNIT- DEV TESTS independent modules(m1,m2,m3)
+INTEG-dev integrates two or more modules(all m1,m2,m3 responds well and communicate with each other-then QA tests integrations
+SYS- after integ-we get build - a .exe file or URL . of web app aded with changes.Built file .exe or URL-->called as ENDPOINT-tests  func+non functional test after build is done
+ACCEP- then we do UAT for checking acceptance testing
+
+from selenium-if we do API testing
+1.response is slow
+2.as request goes to server and response comes to client
+3.so using postman/cypress/playwright- response will be clear, and no defects will occur in testing
+
+in api we can do both
+1.functional and 2.non functional cases
+
+airlines-indigo-airIndia-booking-MAKEMYTRIP
+-------------
+
+MAKEMYTRIP- api interacts with multiple airlines
+then response comes 
+we filter and apply our criteria
+then booking ticket
+
+In API Testing-fast-no frontend-directly communicating to Databse using Servers and gets response
+makemytrip- airlines 
+
+mmt-air India(exposes own DB in form of API)
+mmt(api DB will interact to AirIndia/indigo api and gets response
+
+communication endpoint where 2 different Applications communicates to each other
+
+Types of API
+-----------
+Private API-to communicater internally inside application
+public-communication-inbetween 2 or more application
+eg:Linkedin/blazemeter-direct login (or)login using Google Account-logging in using another app credentials
+1.google exposes API publically-so linkedin,blazemeter,nauki -indirect login
+
+2.GoogleMAP,Rapido,OLA-Public APIs-so using in android&ios
+
+Private API
+-----------
+Payments Gateway-only for Specific person to pay that payment
+asks for authentication&Authorization(oatuh2)
+
+every API needs some input to pass and gives some response(eg:google maps-Location search/google-input as query search)
+
+
+ selenium webdriver?- its a interface/API which used by Eclipse IDE for GUI Testing- interface->converts script to web server as request and gets response in human understandable format
+-------
+API PRocess
+------
+dev -develops API in dev env-then pushed to QA env
+test API using Manual and automation,later when
+API when pushed to Web its called as Web Services
+
+API-dev develops API-its called API
+Web Services-When API Hosted on Internet-its called as WebServices as its available in public
+ALL WS IS api BUT NOT
+ALL apiS ARE NOT WS
+
+EG:GOOGLE MAPS,OLA,UBER all has API and hosted on Web-
+so GoogleMAPs/uber/OLA also called as WebServices
+process:REQ,RES
+------------
+CLIENT IDE<->API<->SERVER API()
+
+HTTP METHODS:
+
+CLIENT IDE<-Req->API<-Res->SERVER API()
+
+CRUD-Create Read Update Delete
+
+types of methods:to interact with servers-API to test-need 5 basic API methods
+1.Get-get the resource(safe-no modification only reading)
+2.Post-Create new resource-posting payload-creating new resource
+3.Put-Update Entire Resouce-add new column or row -new record into DB-adding new employee or adding new criteria for emplyee records
+4.Patch-partial update-update one field value -changing salary from 50k to 1.5L
+5.Delete-Delete entire record like -Deleting 1 Employee from DB table
+
+------
+what is needed for API to Send Request
+Request:
+----------
+1.Http method(get,post,patch,put0	
+2.PAyload(data)
+3.Header(payload additional details)
+4.Endpoint(addr)
+5.Authorization
+Reponse:
+----------
+1.StatusCode
+2.StatusMsg
+3.Cookies
+4.Headers
+
+EXPLORE API DOCUMENTS:
+----------------------
+-->Search-Zoom API Document
+-->RestBooker
+
+BASIC api url DEFINATION:
+-------------------------
+POST "https://reqres.in/api/collections/todos/records/?ID=4"
+----  ----------------- ------------------------------ -----
+METHOD	URL		RESOURCES-PATH PARAMETER        RESOURCES-PATH PARAMETER
+  
+URI/URL:
+------- 	
+
+POST "https://reqres.in/api/collections/todos/records/?ID=4"
+---- ------------------ -----------------------------------
+SCHEME   HOST			PATH  
+
+						-------
+						URN
+	-----------------------------------------------
+		URI
+
+--------------------------------------------------------
+		URL
+
+
+SESSION:2
+------------
+ dATA TRANSFER IN WEB-GOES AS xml/json
+XML-HEAVY WEIGHT
+JSON-LIGHTWEIGHT-LANG INDEPENDENT
+
+WEBSERVICES- XML-DATA TRANSFER
+API- xml/json/text
+
+types of WEB SERVICES?
+---
+
+REST-JSON/XML/TEXT- POST
+SOAP-XML- GET/POST/PUT/PATCH/DELETE
+
+PROTOCOL TYPES:
+----------------
+SOAP-SIMPLE OBJECT ACCESS PROTOCOL
+REST-Representational State Transfer
+
+IDEMPOTENT METHOD? IN TYPES OF METHODS(GET,POST,PUT,PATCH,DEL)
+when posted multiple times and no impact on server
+get,delete-multiple time get -same result -no changes in server
+
+
+endpoint eg: to explain in interview?
+Https://www.google.com/search?q="testng"
+here q- is google searchbox locator name-value-to inspect
+
+Postman 
+collection
+env
+flows
+apis
+mock servers
+monitoring
+history
+
+
+https://reqres.in/api/register
+------
+postman-needs javascript-for scripting and validation of response
+-------------------------
+
+--------------------
+JAVASCRIPT BASICS
+--------------------
+		//use var(old),let,const
+		//Function declaretions
+
+let num=100123;
+console.log("number is "+num);
+		//Function expression-3types- explicit/anonymous/arrow
+
+		//explicit functions
+function add(num1,num2)
+{
+res=num1+num2;
+console.log(res);
+}
+add(101,141);
+
+
+		//anonymous function-- function without name
+
+
+const addition=function (num3,num4)
+{
+    res1=num3+num4;
+    console.log(res1);
+
+}
+addition(199,111)
+
+		//arrow function
+
+
+const ad=(a,b)=>{
+res4=a+b;
+console.log(res4);
+}
+
+ad(11,23);
+
+-------------				//POSTMAN-SNIPPET WRITTING BASICS//	
+covered till postman basic snippet validation
+practise writting response validation scripting!!
+
+basic validation-JS-postman - response validation-checking status and code equals ok,200
+ 	
+
+2ways to write pm object scripting
+
+			1// using direction function
+
+pm.test("status code validation",function(){
+	//2 ways to test pm,
+	// 1.
+	pm.response.to.have.status("OK");
+	// 2.
+	pm.expect(pm.response.status).to.equal("OK");
+
+});
+
+HOW TO VALIDATE PAYLOAD?
+------------------------
+difference between eql and equal
+2 objects are there eg: student{}, emp{}
+eql-used to validate only- students -objects properties
+equal-compares 2 diff objects student vs employee -age check,city check...
+
+
+
+-------
+pm.test("Successful POST request", function () {
+    pm.expect(pm.response.code).to.be.oneOf([200, 201]);
+});
+
+pm.test("Validation", () => {
+    pm.expect(pm.response.code).to.equal(200);
+});
+
+
+2 ways of BDD to fetch values from response
+
+1.  pm.response.to.have.______________-->status/code/json[object.id/object.name/object.price/] (______________)--> 1/tim/1000
+2.  pm.response.__________-->[|json-->[obj.name/obj.price]| /status/code/body].to.eql(___________)-->[200/ok/total response]
+
+
+----------------
+		--------------
+		SESSION-3
+		--------------
+
+BDD-IN POSTMAN-WE USE GHERKIN LANGUAGE  -LIKE CUCUMBER-FEATUREFILE(using given,when,then)
+
+here in postman we use either plain gherkin language to validate --> pm.response.to.have.status(200);
+				or
+assertions using chai library- mocha chai library is a -assertion for JS language 
+uses mostly 1.expect() or 2.Should()/should not			-->pm.expect(pm.response.status).is.equal(200);
+
+
+-----
+JSON-Javascript Object Notation
+syntax:
+---------
+{
+object
+{
+key:value;
+key:value;
+key:["1","2","3","4"]-- array
+}
+
+}
+
+{
+ {
+student
+{
+id:1;
+name:"Jim";
+Location:"America";
+skills:["Java","Cucumber"]
+ }
+}
+
+
+to know json structure -->JSON path finder website !!
+
+practise:-manual postman-snippet scripting -using -gherkin and javascript 
+1.get -fetch reqest
+2.post-create a entry
+3.scripting snippet to fetch req body into a variable and validate some content inside json body
+4.validate json using jsonpathfinder -- and validate randomly some test to check if data inside json body are true or not
+5.api chaining response
+6.storing res body and getting environment created and store.pass env in validations
+7.see session 3 once again and check api chaining of get-post-get-env variable (concept of passing variables) again once!!!-1.50 vdeo time 
+
+
+
+types of variable in pm
+1.collection
+2.env
+3.global var
+
+
+//API Chaining
+EXAMPLE1:Setting up environment with booking id ,storing and using them in get calls to avoid 404 forbidden ,or 400 bad req
+
+step1://creating a QAenvironment
+step2:// to get newly created posting bookingid  from POST REQ 
+step3:// and passing them to next get request-ValidatePostingResponseBody
+step4://check CHAINING flow ==> from post REQ-get bookingid -pass-to get req-and fetch details-save response json-validate booking details 
+
+scalar variable- {{ }}- env value which stored used inside script
+in selenium-scalar var- ${variable}
+
+//put req- to update details with new details
+
+to add put req we need token to update server
+//so create token req- then pass token to the post req in headers
+
+EXAMPLE2 of API chaining:
+--------------------------
+
+step1:
+post(createBookingID)-get(readBookingDetails-should have our booking json body passed)
+step2:
+Create a token-set token to env variable-then pass token value to Header of PUT req
+step3:
+create put req-set env of booking ID in URL endpoint on PUT req- then add Header with Env token id 
+step4:
+Create put req to update booking details created on step1
+step5:
+goto get req on step 1 used, and send req to see updated json body-body should be updated with new values we used on PUT
+step6:
+write pm validation to check pm.req.json() contain expected booking id,name,and prices
+
+
+-----------------------------------------
+const response = pm.response.json();
+
+pm.test("Validate response fields", function () {
+    pm.expect(response.firstname).to.exist;
+    pm.expect(response.firstname).to.be.a('James');
+    
+    pm.expect(response.lastname).to.exist;
+    pm.expect(response.lastname).to.be.a('Brown');
+    
+    pm.expect(response.totalprice).to.exist;
+    pm.expect(response.totalprice).to.be.a('111');
+    
+    pm.expect(response.depositpaid).to.exist;
+    pm.expect(response.depositpaid).to.be.a('true');
+    
+    pm.expect(response.bookingdates).to.exist;
+    pm.expect(response.bookingdates).to.be.an('object');
+    
+    pm.expect(response.bookingdates.checkin).to.exist;
+    pm.expect(response.bookingdates.checkin).to.be.a('2018-01-01');
+    
+    pm.expect(response.bookingdates.checkout).to.exist;
+    pm.expect(response.bookingdates.checkout).to.be.a('2019-01-01');
+    
+    pm.expect(response.additionalneeds).to.exist;
+    pm.expect(response.additionalneeds).to.be.a('Breakfast');
+});
+---------
+debug get scripting to validate values from json body
+const response = pm.response.json();
+
+pm.test("Status code is 200", function () {
+    pm.expect(pm.response.code).to.equal(200);
+});
+
+pm.test("Firstname exists", function () {
+    pm.expect(response.firstname).to.exist;
+});
+
+pm.test("Firstname is a string", function () {
+    pm.expect(response.firstname).to.be.a('Karthickeyan');
+});
+
+pm.test("Lastname exists", function () {
+    pm.expect(response.lastname).to.exist;
+});
+
+pm.test("Lastname is a string", function () {
+    pm.expect(response.lastname).to.be.a('Sekar');
+});
+
+pm.test("Total price exists", function () {
+    pm.expect(response.totalprice).to.exist;
+});
+
+pm.test("Total price is a number", function () {
+    pm.expect(response.totalprice).to.be.a(111);
+});
+
+pm.test("Deposit paid exists", function () {
+    pm.expect(response.depositpaid).to.exist;
+});
+
+pm.test("Deposit paid is a boolean", function () {
+    pm.expect(response.depositpaid).to.be.a(true);
+});
+
+pm.test("Booking dates exist", function () {
+    pm.expect(response.bookingdates).to.exist;
+});
+
+pm.test("Booking dates is an object", function () {
+    pm.expect(response.bookingdates).to.be.an('string');
+});
+
+pm.test("Check-in date exists", function () {
+    pm.expect(response.bookingdates.checkin).to.exist;
+});
+
+pm.test("Check-in date is a date", function () {
+    pm.expect(response.bookingdates.checkin).to.be.a(2026-03-10);
+});
+
+pm.test("Check-out date exists", function () {
+    pm.expect(response.bookingdates.checkout).to.exist;
+});
+
+pm.test("Check-out date is a date", function () {
+    pm.expect(response.bookingdates.checkout).to.be.a(2026-03-10);
+});
+
+pm.test("Additional needs exist", function () {
+    pm.expect(response.additionalneeds).to.exist;
+});
+
+pm.test("Additional needs is a string", function () {
+    pm.expect(response.additionalneeds).to.be.a('laptop');
+});
+
+
+throws error all validations with Uppercasing error--!!!
+
+--------------
+API Response JSON key validations
+
+json data types- number,string,boolean,object,array.
+eg:
+"id":1818;
+"name":"Karthick";
+"Success":"true";
+
+{Mobile:{
+	"modelname":"fx111";
+	"price":20,000;
+
+	}
+
+}
+
+
+json path? - object-> fetching values of object keys .student[0].id ->fetching id of first student
+
+types of JSON- 
+	Nested json
+	Sequential json
+
+-----------SESSION-4----------------------------------------
+
+postman basic post-response script validation
+---------------------------------------------
+			// Validating response status code
+pm.test("Status code is 200", function () {
+    pm.expect(pm.response.code).to.equal(200);
+});
+
+			// Validating response status message
+pm.test("Response message is OK", function () {
+    pm.expect(pm.response.status).to.equal("OK");
+});
+
+			// Validating json response body object values are the same as expected
+let res = pm.response.json();
+pm.environment.set("res",res);
+
+pm.test("JSON response body has total price", function () {
+    pm.expect(res.booking.totalprice).to.exist;
+    pm.expect(res.booking.totalprice).to.be.a('number');
+});
+
+pm.test("JSON response body has firstname", function () {
+    pm.expect(res.booking.firstname).to.exist;
+    pm.expect(res.booking.firstname).to.be.a('string');
+});
+
+pm.test("JSON response body has booking.bookingdates.checkin", function () {
+    pm.expect(res.booking.bookingdates.checkin).to.exist;
+    pm.expect(res.booking.bookingdates.checkin).to.be.a('string');
+});
+
+			// Local Variable - only available for this collection
+let bookingID = res.bookingid;
+console.log(bookingID);
+
+			// Environment variable - available for all collections
+pm.environment.set("BookingID",bookingID);
+
+
+
+
+
+
+
+
+
+
 
